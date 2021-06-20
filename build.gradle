@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.1'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.ppoox'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	compileOnly 'org.projectlombok:lombok:1.18.20'
+	annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+	testCompileOnly 'org.projectlombok:lombok:1.18.20'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	implementation 'com.navercorp.lucy:lucy-xss-servlet:2.0.1'
+
+	implementation 'org.springframework.boot:spring-boot-starter-validation:2.5.0'
+	
+	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+}
+
+test {
+	useJUnitPlatform()
+}
